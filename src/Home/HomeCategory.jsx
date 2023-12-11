@@ -45,48 +45,52 @@ const categoryList = [
 ];
 
 const HomeCategory = () => {
-  return <div className="category-section style-4 padding-tb">
-          <div className="container">
-            {/* section header */}
-            <div className="section-header text-center">
-              <span className="subtitle">{subTitle}</span>
-              <h2 className="title">{title}</h2>
+  return (
+    <div className="category-section style-4 padding-tb">
+      <div className="container">
+        {/* section header */}
+        <div className="section-header text-center">
+          <span className="subtitle">{subTitle}</span>
+          <h2 className="title">{title}</h2>
 
-              {/* section card */}
-              <div className="section-wrapper">
-                <div className="row g-4 justify-content-center row-cols-md-3 row-cols-sm-2 row-cols-1">
-                  {
-                    categoryList.map((card, i) => <div key={i} className="col">
-                      <Link to="/shop" className="category-item">
-                          <div className="category-inner">
-                            {/* image thumbnail */}
-                            <div className="category-thumb">
-                              <img src={card.imgUrl} alt="" />
-                            </div>
+          {/* section card */}
+          <div className="section-wrapper">
+            <div className="row g-4 justify-content-center row-cols-md-3 row-cols-sm-2 row-cols-1">
+              {categoryList.map((card, i) => (
+                <div key={i} className="col">
+                  <Link to="/shop" className="category-item">
+                    <div className="category-inner">
+                      {/* image thumbnail */}
+                      <div className="category-thumb">
+                        <img src={card.imgUrl} alt="" />
+                      </div>
 
-                            {/* content */}
-                            <div className="category-content">
-                              <div className="cate-icon">
-                                <i className={card.iconName}></i>
-                              </div>
-                              <Link to="/shop">
-                                <h6>{card.title}</h6>
-                              </Link>
-                            </div>
-                          </div>
-                      </Link>
-                    </div>)
-                  }
+                      {/* content */}
+                      <div className="category-content">
+                        <div className="cate-icon">
+                          <i className={card.iconName}></i>
+                        </div>
+                        <Link to="/shop">
+                          <h6>{card.title}</h6>
+                        </Link>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
+              ))}
+            </div>
 
-                {/* get start btn */}
-                <div className="text-center mt-5">
-                  <Link to="/shop" className="lab-btn"><span>{btnText}</span></Link>
-                </div>
-              </div>
+            {/* get start btn */}
+            <div className="text-center mt-5">
+              <Link to="/shop" className="lab-btn">
+                <span>{btnText}</span>
+              </Link>
             </div>
           </div>
-  </div>;
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default HomeCategory;
