@@ -3,6 +3,7 @@ import Banner from './Banner'
 import HomeCategory from './HomeCategory'
 import ProductShocase from './ProductShowcase'
 import Register from './Register'
+import LocationSpread from './LocationSpread'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <HomeCategory />
       <ProductShocase />
       <Register />
+      <LocationSpread />
     </>
   )
 }
