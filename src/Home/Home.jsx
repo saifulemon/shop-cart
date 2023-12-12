@@ -5,6 +5,7 @@ import ProductShocase from './ProductShowcase'
 import Register from './Register'
 import LocationSpread from './LocationSpread'
 import AboutUs from './AboutUs'
+import AppsSec from './AppsSec'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Register />
       <LocationSpread />
       <AboutUs />
+      <AppsSec />
     </>
   )
 }
